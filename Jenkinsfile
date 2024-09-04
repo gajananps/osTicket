@@ -12,6 +12,12 @@ pipeline {
             }
         }
 
+	stage('Set Permissions') {
+            steps {
+		sh 'chmod +x run.sh'
+        }
+        }
+
         stage('build docker container') {
             steps {
                 sh 'sudo ./run.sh'
