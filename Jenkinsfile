@@ -14,7 +14,7 @@ pipeline {
 
         stage('build docker container') {
             steps {
-                sh './run.sh'
+                sh 'sudo ./run.sh'
             }
         }
 		
